@@ -5,11 +5,11 @@ import React from 'react'
 
 export default function DefaultLayout({children}) {
   return (
-    <div>
+    <div className="defWrapper">
         <Header />
-        <div className="container">
+        <div className="defWrapper__container">
             <Sidebar/>
-            <div className="content">
+            <div className="defWrapper__container-content">
                 {children}
             </div>
         </div>
