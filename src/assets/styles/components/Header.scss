@@ -14,11 +14,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &-logo {
+    &-search,
+    &-searchResult {
+      width: 361px;
     }
     &-search {
       position: relative;
-      width: 361px;
       height: var(--search-height);
       display: flex;
       background-color: rgba(22, 24, 35, 0.06);
@@ -34,34 +35,31 @@
       }
 
       //ng dùng nhập chữ sẽ thay đổi search color
-      input:not(:placeholder-shown) ~.search-btn{
+      input:not(:placeholder-shown) ~ .search-btn {
         color: rgba(22, 24, 35, 0.75);
       }
 
-      &::after{
-        content:"";
+      &::after {
+        content: "";
         position: absolute;
         top: var(--search-top-spacer);
         right: var(--search-button-width);
         width: 1px;
         height: calc(var(--search-height) - var(--search-top-spacer) * 2);
         background-color: rgba(22, 24, 35, 0.12);
-
       }
-      &:focus-within{
-        border-color:rgba(22, 24, 35, 0.12);
+      &:focus-within {
+        border-color: rgba(22, 24, 35, 0.12);
       }
       .clear,
-      .loading
-       {
+      .loading {
         position: absolute;
         right: calc(var(--search-button-width) + 16px);
         top: 50%;
         transform: translateY(-50%);
         color: rgba(22, 24, 35, 0.34);
-
       }
-     
+
       .search-btn {
         width: var(--search-button-width);
         height: 100%;
@@ -74,11 +72,19 @@
           cursor: pointer;
           background-color: rgba(22, 24, 35, 0.03);
         }
-        &:active{
-            background-color: rgba(22, 24, 35, 0.06);
+        &:active {
+          background-color: rgba(22, 24, 35, 0.06);
         }
       }
     }
-
+    &-searchResult {
+      .search-title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba(22, 24, 35, 0.75);
+        padding: 5px 12px 3px;
+      }
+    }
   }
 }

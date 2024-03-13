@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Tippy from "@tippyjs/react/headless";
+//
+import { Wrapper as PopertWrapper } from "../../../Poperties";
+import AccountItems from "../../../AccountItems/index";
+import Buttons from "../../../Buttons";
 
 export default function Header() {
+  const [searchResult, setSearchResult] = useState([]);
+  useEffect(() => {
+    setTimeout(() => {
+      setSearchResult([]);
+    }, 0);
+  });
   return (
     <>
       <header className="header">
@@ -15,19 +26,38 @@ export default function Header() {
             />
           </div>
           {/* search field  */}
-          <div className="header__inner-search">
-            <input placeholder="Search account and videos" spellCheck="false" />
-            <button className="clear">
-              <i className="fa-solid fa-circle-xmark"></i>
-            </button>
-            <i className="fa-solid fa-spinner loading"></i>
-            <button className="search-btn">
-              <i className="fa-solid fa-magnifying-glass" />
-            </button>
-          </div>
+
+          <Tippy
+            interactive
+            visible={searchResult.length > 0}
+            render={(attrs) => (
+              <div className="header__inner-searchResult" tabIndex="-1" {...attrs}>
+                <PopertWrapper>
+                  <h4 className="search-title">Accounts</h4>
+                  <AccountItems />
+                  <AccountItems />
+                  <AccountItems />
+                </PopertWrapper>
+              </div>
+            )}
+          >
+            <div className="header__inner-search">
+              <input
+                placeholder="Search account and videos"
+                spellCheck="false"
+              />
+              <button className="clear">
+                <i className="fa-solid fa-circle-xmark"></i>
+              </button>
+              <i className="fa-solid fa-spinner loading"></i>
+              <button className="search-btn">
+                <i className="fa-solid fa-magnifying-glass" />
+              </button>
+            </div>
+          </Tippy>
           {/* action  */}
-          <div className="header__inner-actions" >
-            
+          <div className="header__inner-actions">
+            <Buttons primary to='/login' onClick={() => alert('clicked')}>Log in</Buttons>
           </div>
         </div>
       </header>
