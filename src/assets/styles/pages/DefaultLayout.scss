@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     &__container{
-        width: var(--default-layout-width);
+        width: $layout-header-width;
         display: flex;
       &-content{
         flex: 1;

@@ -31,7 +31,11 @@ export default function Header() {
             interactive
             visible={searchResult.length > 0}
             render={(attrs) => (
-              <div className="header__inner-searchResult" tabIndex="-1" {...attrs}>
+              <div
+                className="header__inner-searchResult"
+                tabIndex="-1"
+                {...attrs}
+              >
                 <PopertWrapper>
                   <h4 className="search-title">Accounts</h4>
                   <AccountItems />
@@ -57,7 +61,9 @@ export default function Header() {
           </Tippy>
           {/* action  */}
           <div className="header__inner-actions">
-            <Buttons primary to='/login' onClick={() => alert('clicked')}>Log in</Buttons>
+            <Buttons text>Upload</Buttons>
+            <Buttons primary>Log in</Buttons>
+            <button className="testbtn"> testr</button>
           </div>
         </div>
       </header>

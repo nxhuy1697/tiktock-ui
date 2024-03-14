@@ -1,16 +1,12 @@
 .header {
-  --search-border-radius: 92px;
-  --search-height: 46px;
-  --search-top-spacer: 9px;
-  --search-button-width: 52px;
   width: 100%;
-  height: var(--default-layout-header-height);
+  height: $layout-header-height;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 12%);
   display: flex;
   justify-content: center;
   &__inner {
     height: 100%;
-    width: var(--default-layout-width);
+    width: $layout-header-width;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,16 +16,16 @@
     }
     &-search {
       position: relative;
-      height: var(--search-height);
+      height: $search-height;
       display: flex;
       background-color: rgba(22, 24, 35, 0.06);
-      border-radius: var(--search-border-radius);
+      border-radius: $search-border-radius;
       padding-left: 16px;
       border: 1.5px solid transparent;
       input {
         flex: 1;
         height: 100%;
-        color: var(--black);
+        color: $black;
         font-size: 1.6rem;
         background-color: transparent;
       }
@@ -42,10 +38,10 @@
       &::after {
         content: "";
         position: absolute;
-        top: var(--search-top-spacer);
-        right: var(--search-button-width);
+        top: $search-top-spacer;
+        right: $search-button-width;
         width: 1px;
-        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        height: calc($search-height - $search-top-spacer * 2);
         background-color: rgba(22, 24, 35, 0.12);
       }
       &:focus-within {
@@ -54,23 +50,23 @@
       .clear,
       .loading {
         position: absolute;
-        right: calc(var(--search-button-width) + 16px);
+        right: calc($search-button-width + 16px);
         top: 50%;
         transform: translateY(-50%);
         color: rgba(22, 24, 35, 0.34);
       }
 
       .search-btn {
-        width: var(--search-button-width);
+        width: $search-button-width;
         height: 100%;
-        border-bottom-right-radius: var(--search-border-radius);
-        border-top-right-radius: var(--search-border-radius);
+        border-bottom-right-radius: $search-border-radius;
+        border-top-right-radius: $search-border-radius;
         font-size: 1.8rem;
         color: rgba(22, 24, 35, 0.34);
 
         &:hover {
           cursor: pointer;
-          background-color: rgba(22, 24, 35, 0.03);
+          background-color: $border-focus;
         }
         &:active {
           background-color: rgba(22, 24, 35, 0.06);
@@ -85,6 +81,10 @@
         color: rgba(22, 24, 35, 0.75);
         padding: 5px 12px 3px;
       }
+    }
+    &-actions {
+      display: flex;
+      gap: 8px;
     }
   }
 }

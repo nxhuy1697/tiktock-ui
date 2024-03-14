@@ -4,7 +4,7 @@
   padding: 6px 16px;
   cursor: pointer;
   &:hover {
-    background: rgba(22, 24, 35, 0.03);
+    background: $border-focus;
   }
   &__avatar {
     width: 40px;
@@ -20,7 +20,7 @@
       font-weight: 500;
       .fa-circle-check {
         margin-left: 6px;
-        color: rgb(32, 213, 236);
+        color: $blue-check;
       }
     }
     &-username {

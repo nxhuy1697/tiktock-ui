@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+@import '../theme/variable';
 
 
 :root{
-    --primary: #fe2c55;
-    --black: #000;
-    --text-grey: #333;
+
+
+
     //default layout
-    --default-layout-header-height : 60px;
-    --default-layout-width: 1150px;
+
+
 }
 *{
     box-sizing: border-box;
@@ -23,13 +23,13 @@ body{
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
-    color: var(--text-grey);
+    color: $text-grey;
 }
 button, input, [tabindex]{
     outline: none;
     border: none;
 }
 a{
-    color: var(--text-grey);
+    color: $text-grey;
     text-decoration: none;
 }
