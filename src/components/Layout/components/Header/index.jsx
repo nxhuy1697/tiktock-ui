@@ -63,7 +63,7 @@ export default function Header() {
           <div className="header__inner-actions">
             <Buttons text>Upload</Buttons>
             <Buttons primary>Log in</Buttons>
-            <button className="testbtn"> testr</button>
+
           </div>
         </div>
       </header>

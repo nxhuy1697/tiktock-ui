@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.cardExample-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cardExample-container .cardExample-items {
+  width: calc(50% - 20px); /* 25% width và margin giữa các item */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}/*# sourceMappingURL=ExampleCards.css.map */

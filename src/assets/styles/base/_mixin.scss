@@ -1,0 +1,12 @@
+@mixin btn($mw , $bd-r , $mh , $pd , $fz, $bd, $bg) {
+  min-width: $mw;
+  border-radius: $bd-r;
+  min-height: $mh;
+  padding: $pd;
+  font-size: $fz;
+  cursor: pointer;
+  border: $bd;
+  background-color: $bg;
+
+}
+

@@ -12,7 +12,7 @@ export default function AccountItems() {
         <div className="accountItems__info">
           <h4 className="accountItems__info-name">
             <span>Taylor Swift</span>
-            <i class="fa-solid fa-circle-check"></i>
+            <i className="fa-solid fa-circle-check"></i>
           </h4>
           <span className="accountItems__info-username">taylorswift</span>
         </div>

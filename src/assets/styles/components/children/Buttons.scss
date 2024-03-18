@@ -1,18 +1,20 @@
 .pack {
-  min-width: 100px;
-  border-radius: 4px;
-  min-height: 36px;
-  padding: 9px 16px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  cursor: pointer;
-  background: white;
-  border: 1px solid transparent;
+  @include btn(
+    100px,
+    4px,
+    36px,
+    9px 16px,
+    1.6rem,
+    1px solid transparent,
+    $white
+  );
 }
 //btn type
-.text{
-
-  &:hover{
+// .button{
+//   @include btn(100px, 4px, 36px, 9px 16px, 1.6rem,  1px solid transparent, $white);
+// }
+.text {
+  &:hover {
     text-decoration: underline;
   }
 }
@@ -28,15 +30,15 @@
   color: $primary;
   border-color: currentColor;
   &:hover {
-    background-color:$outline-hv; 
+    background-color: $outline-hv;
   }
 }
 //btn size
-.btnSmall{
-    min-width: 88px;
-    padding: 4px 16px;
+.btnSmall {
+  min-width: 88px;
+  padding: 4px 16px;
 }
-.btnLarge{
-    min-width: 140px;
-    padding: 14px 16px;
+.btnLarge {
+  min-width: 140px;
+  padding: 14px 16px;
 }
